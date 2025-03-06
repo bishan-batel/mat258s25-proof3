@@ -1,0 +1,18 @@
+\begin{question}
+	If $f\circ g$ is surjective, then $f$ is surjective ($P$).
+
+	\begin{proof}
+
+		$$ P_{f\circ g}=	\forall x \in X \exists z \in Z : \, (f\circ g)(x) = z $$
+		$$ P = \forall y \in Y \exists z \in Z :\, f(y) = x$$
+		\begin{align*}
+			P_{f\circ g}\wedge		\neg P   \implies
+			     & \exists z \in Z  \forall y \in Y :\, f(y) \neq z \\
+			     & \llet x \in X :\, \not\exists z : f(g(x)) = z    \\
+			     & \not\exists z \in Z :\, (f\circ g)(x) = z        \\
+			\sim & \neg P_{f\circ g}
+		\end{align*}
+		$$ \neg P \wedge P_{f\circ g} \implies \neg P_{f\circ g} \therefore P $$
+
+	\end{proof}
+\end{question}
