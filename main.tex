@@ -22,25 +22,40 @@
 
 \begin{document}
 
-\title{MAT258S25 Proof 2}
+\title{MAT258S25 Proof 3}
 \author{Kishan S Patel}
 \maketitle
 
 \renewcommand{\qedsymbol}{QED}
 
-\begin{align*}
-	\llet g & : X \to Y \\
-	\llet f & : Y \to Z
-\end{align*}
-$$ \begin{matrix}
-		X  \neq \emptyset &
-		Y  \neq \emptyset &
-		Z  \neq \emptyset
-	\end{matrix}$$
+
+\begin{lemma}[$\mathcal L_1$]
+	The $n$th triangular number can be calculated by the explicit formula:
+	$$
+		T_n = \sum_{i=1}^{n} i
+	$$
+\end{lemma}
+
+\begin{lemma}[$\mathcal L_2$]
+	If some number $m^2$ is both odd and a perfect square, $m$ must be odd.
+\end{lemma}
+
+\begin{lemma}[$\mathcal L_3$]
+	For any odd positive integer $m$, $\exists n \in \Z, n\ge 0 : m=2n+1$.
+\end{lemma}
+
+\begin{lemma}[$\mathcal L_4$]
+	$\Z^{+}$ is closed under addition, subtraction, and multiplication.
+\end{lemma}
+
+Let $T_m=1+2+3+\cdots+m$ where $m \in \Z$  with $m \ge 1$ ($T_m$ is the $m$th triangular number).
+
 
 \begin{questions}
+
 	\input{proofs/proof1.tex}
 	\input{proofs/proof2.tex}
+
 \end{questions}
 
 \end{document}

@@ -1,16 +1,39 @@
 \begin{question}
-
-	If $f\circ g$ is injective, then $g$ is injective.
-
+	Use induction to prove $\forall m \in (\Z^{+} \setminus \set{0} ) : T_m = \frac{m(m+1)}{2} $.
 	\begin{proof}
-		\[ P_{f\circ g} = \forall x_0, x_1  \in Z : \,	(f \circ g)(x) = (f\circ g)(y) \iff x = y \]
+
+		Let $P_1(m)$ be the proposition that $T_m = \frac{m(m+1)}{2}$ is true.
 
 		\begin{align*}
-			\llet x, y     & \in X            \\
-			g(x)           & = g(y)           \\
-			(f \circ g)(x) & = (f \circ g)(y) \\
-			P_{f\circ g}   & \implies x = y
+			\mathcal L_1 \implies			T_1 & = \sum_{i=1}^{1}i = 1                       \\
+			P_1(1) \implies T_1         & = \frac{m(m+1)}{2}                          \\
+			                            & = \frac{1(1+1)}{2}                          \\
+			                            & = 1                                         \\
+			                            & \therefore\,         P_1(1) \text{is true.}
 		\end{align*}
-		$$ \therefore \not\exists x,y\in X : \, g(x) = g(y) \wedge x \neq y $$
+		\begin{align*}
+			\mathcal L_1 \implies			T_{k+1}  & = \sum_{i=1}^{k+1}i       \\
+			                                 & = \sum_{i=1}^{k}i + (k+1) \\
+			\therefore															T_{k+1} & = T_k + (k+1)
+		\end{align*}
+		\begin{align*}
+			P_1(k)   & \implies T_k                             = \frac{k(k+1)}{2} \\
+			P_1(k+1) & \implies 	T_{k+1}  =\frac{(k+1)(k+2)}{2}
+		\end{align*}
+		\begin{align*}
+			P_1(k) \wedge \mathcal{L}_1 \implies T_{k+1} & = \frac{k(k+1)}{2} + (k+1)   \\
+			                                             & = \frac{k(k+1) + 2(k+1)}{2}  \\
+			                                             & = \frac{k^2 + k + 2k + 2}{2} \\
+			                                             & = \frac{k^2 + 3k + 2}{2}     \\
+			                                             & =\frac{(k+1)(k+2)}{2}        \\
+			\therefore P_1(k)\wedge \mathcal{L}_1        & \implies P_1(k+1)
+		\end{align*}
+		\begin{align*}
+			\mathcal{L}_1                                               & \implies P_1(1)             \\
+			\mathcal{L}_1 \wedge		P_1(k)                                & \implies P_1(k+1)           \\
+			\therefore \forall m          \in \op{dom}({\mathcal{L}_1}) & : P_1(m)  \text{ is true. }
+		\end{align*}
+
+
 	\end{proof}
 \end{question}

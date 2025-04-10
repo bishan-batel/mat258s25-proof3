@@ -1,18 +1,46 @@
+\pagebreak
 \begin{question}
-	If $f\circ g$ is surjective, then $f$ is surjective ($P$).
+
+	Prove that the positive integer $n$ is a triangular number ($P_2$) if and only if $8n+1$ is a perfect square ($P_3$).
 
 	\begin{proof}
 
-		$$ P_{f\circ g}=	\forall x \in X \exists z \in Z : \, (f\circ g)(x) = z $$
-		$$ P = \forall y \in Y \exists z \in Z :\, f(y) = x$$
 		\begin{align*}
-			P_{f\circ g}\wedge		\neg P   \implies
-			     & \exists z \in Z  \forall y \in Y :\, f(y) \neq z \\
-			     & \llet x \in X :\, \not\exists z : f(g(x)) = z    \\
-			     & \not\exists z \in Z :\, (f\circ g)(x) = z        \\
-			\sim & \neg P_{f\circ g}
+			P_3 \implies			m \in \Z^{+} & : m^2 = 8n+1
 		\end{align*}
-		$$ \neg P \wedge P_{f\circ g} \implies \neg P_{f\circ g} \therefore P $$
+		\begin{align*}
+			\llet a       & = 4n                            \\
+			8n+1          & = 2a+1                          \\
+			\mathcal{L}_3 & \implies {8n+1} \text{ is odd.} \\
+			\mathcal{L}_2 & \implies {m} \text{ is odd.}
+		\end{align*}
+		\begin{align*}
+			m^2                     & = 8n + 1            \\
+			\llet b \in \Z, b \ge 0 & : m = 2b + 1;       \\
+			(2b+1)^2                & = 8n+1              \\
+			4b^2+4b+1               & = 8n+1              \\
+			n                       & = \frac{4b^2+4b}{8} \\
+			n                       & = \frac{b^2+b}{2}   \\
+			n                       & = \frac{b(b+1)}{2}  \\
+			n               = T_b   & \implies P_2        \\
+			\therefore P_3          & \implies P_ 2
+		\end{align*}
+		\begin{align*}
+			P_2 \implies \exists k \in \Z^{+}  : n & = \frac{k(k+1)}{2}      \\
+			8n+1                                   & = 8\frac{k(k+1)}{2} + 1 \\
+			                                       & = 4k(k+1) + 1           \\
+			                                       & = 4k^2 + 4k +1          \\
+			                                       & = 4\pa{k+\frac{1}{2}}^2 \\
+			                                       & = \pa{16k+8}^2          \\
+			\llet m                                & = 16k + 8               \\
+			\mathcal{L}_4 \wedge k \in \Z^{+}      & \implies m \in Z^+      \\
+			8n + 1                                 & = m^2                   \\
+			\therefore			P_2                       & \implies P_3
+		\end{align*}
+
+		$$ \ba{(P_2 \implies P_3) \wedge (P2 \impliedby P_3)} \implies P_2 \iff P_3 $$
+
 
 	\end{proof}
+
 \end{question}
